@@ -46,9 +46,9 @@ export default function Contacts() {
           <table className="contacts_table  border-4 border-black w-[900px]" >
             <thead className=''>
               <tr>
-                <th className="w-1/3 text-left border border-black bg-[#95a4ff]">Name</th>
-                <th className="w-1/3 text-left border border-black bg-[#95a4ff]">Phone number</th>
-                <th className="w-1/3 text-left border border-black bg-[#95a4ff]">Email</th>
+                <th className="w-1/3 pl-2 text-left border border-black bg-[#95a4ff]">Name</th>
+                <th className="w-1/3 pl-2 text-left border border-black bg-[#95a4ff]">Phone number</th>
+                <th className="w-1/3 pl-2 text-left border border-black bg-[#95a4ff]">Email</th>
               </tr>
             </thead>
             <tbody className="h-[400px] block  overflow-y-scroll">
