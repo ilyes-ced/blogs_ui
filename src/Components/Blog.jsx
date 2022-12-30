@@ -13,8 +13,8 @@ export default function Blog() {
   const [commit, setCommit] = useState("");
 
   const gestion = (one, two) => {
-    document.querySelector(`.${one}`).classList.add("active");
-    document.querySelector(`.${two}`).classList.remove("active");
+    document.querySelector(`.${one}`).classList.remove("hidden");
+    document.querySelector(`.${two}`).classList.add("hidden");
   };
 
   const postsList = posts.filter((val) => {
@@ -40,24 +40,17 @@ export default function Blog() {
 
   return (
     <>
-      <div className="blogs">
+      <div className="blogs main_container p-12 bg-white border-4  border-black ">
         <div className="head">
-          <Link className="nav-link" to="/">
-            Home
-          </Link>{" "}
-          <h2>blog</h2>
-          <div className="btns">
-            <button onClick={() => gestion("post", "form")}>
-              List all Posts
-            </button>
-            <button onClick={() => gestion("form", "post")}>Create Post</button>
-          </div>
+        <h2 className="text-2xl font-bold mb-4">Blogs</h2>
+          
+          
         </div>
         <div className=" post Child active">
           <div className="filter-by-date">
             <div>
               <label htmlFor="start">Start</label>
-              <input
+              <input className="w-1/2  border-b-4 border-black mb-4 pt-[2px] pl-6 focus:border-[#ffa580] outline-none"
                 type="date"
                 id="start"
                 onChange={(e) => setStartdate(e.target.value)}
@@ -65,7 +58,7 @@ export default function Blog() {
             </div>
             <div>
               <label htmlFor="end">End</label>
-              <input
+              <input className="w-1/2  border-b-4 border-black mb-4 pt-[2px] pl-6 focus:border-[#ffa580] outline-none"
                 type="date"
                 id="end"
                 onChange={(e) => setEnddate(e.target.value)}
@@ -73,7 +66,7 @@ export default function Blog() {
             </div>
           </div>
 
-          <table>
+          <table className="bg-red-600">
             <thead>
               <tr>
                 <th>Subject</th>
@@ -119,7 +112,9 @@ export default function Blog() {
             </tbody>
           </table>
         </div>
-        <div className="Child form">
+
+
+        <div className="Child form hidden">
           <h4>Please fill in post information form</h4>
           <form
             onSubmit={(e) => {
@@ -169,6 +164,10 @@ export default function Blog() {
             />
           </form>
         </div>
+        <div className="btns flex flex-row mt-8 space-x-8">
+            <button className="links bg-[#ffc9fd] grow flex justify-center items-center px-20 border-2 border-black hover:bg-black hover:text-white h-8" onClick={() => gestion("post", "form")}>List all Blogs</button>
+            <button className="links bg-[#ffc9fd] grow flex justify-center items-center px-20 border-2 border-black hover:bg-black hover:text-white h-8" onClick={() => gestion("form", "post")}>Create Blog</button>
+          </div>
       </div>
     </>
   );
