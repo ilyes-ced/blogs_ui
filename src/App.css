@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main_app{
+    background-color: red;
+}
+
+
+.main_container{
+    
+    box-shadow: 15px 15px 0px #ffa580, 15px 15px 0px 4px rgba(0,0,0,1)
+}
+
+.links{
+    transition: .2s all ease-in-out;
+    box-shadow: 5px 5px 0px #ffa580, 5px 5px 0px 2px rgba(0,0,0,1)
+}
+
+
+
+.contacts_table{
+    box-shadow: 5px 5px 0px #79fdc4, 5px 5px 0px 2px rgba(0,0,0,1)
+}
