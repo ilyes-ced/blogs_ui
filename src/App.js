@@ -58,7 +58,6 @@ function App() {
       <g
      id="layer1">
         <ellipse
-           style="fill:#ffc9fd;fill-opacity:1;stroke:#000000;stroke-width:0.996;stroke-dasharray:none;stroke-opacity:1"
            style={{fill:'#ffc9fd', fillOpacity: '1', stroke: '#000000', strokeWidth: '1', strokeOpacity: '1'}}
            id="path6334-3"
            cx="20"
@@ -66,7 +65,6 @@ function App() {
            rx="20"
            ry="20" />
         <ellipse
-           style="fill:#ffc9fd;fill-opacity:1;stroke:#000000;stroke-width:0.996072;stroke-dasharray:none;stroke-opacity:1"
            style={{fill:'#ffc9fd', fillOpacity: '1', stroke: '#000000', strokeWidth: '1', strokeOpacity: '1'}}
            id="path6334-3-7"
            cx="60"
@@ -74,7 +72,6 @@ function App() {
            rx="20"
            ry="20" />
         <ellipse
-           style="fill:#ffc9fd;fill-opacity:1;stroke:#000000;stroke-width:0.996072;stroke-dasharray:none;stroke-opacity:1"
            style={{fill:'#ffc9fd', fillOpacity: '1', stroke: '#000000', strokeWidth: '1', strokeOpacity: '1'}}
            id="path6334-3-3"
            cx="100"
