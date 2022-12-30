@@ -50,25 +50,28 @@ export default function Blog() {
 
           <div className="filter-by-date flex flex-row w-full mb-2 ">
             <div className='w-1/2  flex items-center justify-center '>
-              <label htmlFor="start" className="border-b-4 border-black mb-4 pb-[2px] mt-[2px]">Start : </label>
+              <label htmlFor="start" className="border-b-4 border-black mb-4 pb-[1px] mt-[2px]">Start : </label>
               <input className="  border-b-4 border-black mb-4 pt-[2px]  focus:border-[#ffa580] outline-none" type="date" id="start" onChange={(e) => setStartdate(e.target.value)} />
             </div>
             <div className='w-1/2 flex items-center justify-center '>
-              <label htmlFor="end" className="border-b-4 border-black mb-4 pb-[2px] mt-[2px]">End : </label>
+              <label htmlFor="end" className="border-b-4 border-black mb-4 pb-[2p1] mt-[2px]">End : </label>
               <input className="  border-b-4 border-black mb-4 pt-[2px]  focus:border-[#ffa580] outline-none" type="date" id="end" onChange={(e) => setEnddate(e.target.value)} />
             </div>
           </div>
 
-          <table className="contacts_table  border-4 border-black w-[900px]">
-            <thead>
-              <tr>
-                <th className="w-1/5 text-left border border-black bg-[#95a4ff] pl-2" >Subject</th>
-                <th className="w-1/5 text-left border border-black bg-[#95a4ff] pl-2" >Description</th>
-                <th className="w-1/5 text-left border border-black bg-[#95a4ff] pl-2" >Date</th>
-                <th className="w-1/5 text-left border border-black bg-[#95a4ff] pl-2" >like</th>
-                <th className="w-1/5 text-left border border-black bg-[#95a4ff] pl-2" >commit</th>
-              </tr>
-            </thead>
+
+
+          <div className="  contacts_table   border-4 border-black w-[900px]">
+            <div className="flex flex-row">
+                <div className="w-1/5 text-left border border-black bg-[#95a4ff] pl-2" >Subject</div>
+                <div className="w-1/5 text-left border border-black bg-[#95a4ff] pl-2" >Description</div>
+                <div className="w-1/5 text-left border border-black bg-[#95a4ff] pl-2" >Date</div>
+                <div className="w-[97px]  border border-black bg-[#95a4ff] pl-2" >like</div>
+                <div className="grow text-left border border-black bg-[#95a4ff] pl-2" >commit</div>
+            </div>
+            <div className="max-h-[400px] overflow-y-scroll">
+              
+          <table className="w-full">
             <tbody>
               {postsList.map((post) => {
                 return (
@@ -76,13 +79,16 @@ export default function Blog() {
                     <td className="pl-2 w-1/5  border border-black">{post.subject}</td>
                     <td className="pl-2 w-1/5  border border-black">{post.description}</td>
                     <td className="pl-2 w-1/5  border border-black">{post.date}</td>
-                    <td className="pl-2 border border-black flex items-center justify-between ">
+                    <td className="pl-2 border border-black  ">
+                      <div className=" flex flex-row justify-between items-center">
+                        
                       {post.like}
                       <button onClick={() => dispatch(like(post))} className='p-[6px] hover:bg-[#ffa580] rounded-full ml-2 transition-all duration-200 ease-in-out '>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
                           <path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
                         </svg>
                       </button>
+                      </div>
                       
                     </td>
                     <td className="w-1/5  border border-black">
@@ -100,6 +106,12 @@ export default function Blog() {
               })}
             </tbody>
           </table>
+            </div>
+          </div>
+
+
+
+          
         </div>
 
 

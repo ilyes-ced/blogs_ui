@@ -43,15 +43,21 @@ export default function Contacts() {
             	</svg>
 			</div>
           </div>
-          <table className="contacts_table  border-4 border-black w-[900px]" >
-            <thead className=''>
-              <tr>
-                <th className="w-1/3 pl-2 text-left border border-black bg-[#95a4ff]">Name</th>
-                <th className="w-1/3 pl-2 text-left border border-black bg-[#95a4ff]">Phone number</th>
-                <th className="w-1/3 pl-2 text-left border border-black bg-[#95a4ff]">Email</th>
-              </tr>
-            </thead>
-            <tbody className="h-[400px] block  overflow-y-scroll">
+
+
+          <div className="  contacts_table   border-4 border-black w-[900px]">
+            <div className=''>
+              <div className="flex flex-row">
+                <div className="w-1/3 pl-2 text-left border border-black bg-[#95a4ff]">Name</div>
+                <div className="w-1/3 pl-2 text-left border border-black bg-[#95a4ff]">Phone number</div>
+                <div className="w-1/3 pl-2 text-left border border-black bg-[#95a4ff]">Email</div>
+              </div>
+            </div>
+            <div className="max-h-[400px] overflow-y-scroll">
+
+            <table className="  w-full" >
+            
+            <tbody className="">
               {contactsList.map((contact, i) => {
                 return (
                   <tr key={i}>
@@ -63,6 +69,8 @@ export default function Contacts() {
               })}
             </tbody>
           </table>
+            </div>
+          </div>
 		  
         </div>
         <div className="Child form hidden">
