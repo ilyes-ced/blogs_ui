@@ -85,7 +85,7 @@ export default function Contacts() {
                 </div>
               </div>
             </div>
-            <div className="max-h-[400px] overflow-y-scroll">
+            <div className="scrollable max-h-[400px] overflow-y-scroll">
               <table className="  w-full">
                 <tbody className="">
                   {contactsList.map((contact, i) => {

@@ -118,7 +118,7 @@ export default function Blog() {
               <div className="w-1/5 text-left border border-black bg-[#95a4ff] pl-2">
                 Date
               </div>
-              <div className="w-[97px]  border border-black bg-[#95a4ff] pl-2">
+              <div className="w-1/5  border border-black bg-[#95a4ff] pl-2">
                 like
               </div>
               <div className="grow text-left border border-black bg-[#95a4ff] pl-2">
@@ -140,7 +140,7 @@ export default function Blog() {
                         <td className="pl-2 w-1/5  border border-black">
                           {post.date}
                         </td>
-                        <td className="pl-2 border border-black  ">
+                        <td className="pl-2 w-1/5 border border-black  ">
                           <div className=" flex flex-row justify-between items-center">
                             {post.like}
                             <button
@@ -161,27 +161,30 @@ export default function Blog() {
                           </div>
                         </td>
                         <td className="w-1/5  border border-black">
-                          {post.commit.length === 0 ? (
-                            <div className="commit flex flex-row">
-                              <input
-                                type="text"
-                                onChange={(e) => setCommit(e.target.value)}
-                                className=""
-                                placeholder="Commit"
-                              />
-                              <button
-                                className="bg-[#ffa580]  border border-black transition-all duration-200 ease-in-out hover:bg-black hover:text-white "
-                                onClick={(e) => {
-                                  dispatch(addCommit([post.id, commit]));
-                                }}
-                              >
-                                {" "}
-                                commit{" "}
-                              </button>
-                            </div>
-                          ) : (
-                            post.commit
-                          )}
+                          <div className="w-[178px] ">
+                            {post.commit.length === 0 ? (
+                              <div className="commit  flex flex-row">
+                                <input
+                                  type="text"
+                                  onChange={(e) => setCommit(e.target.value)}
+                                  className="w-[125px] outline-none"
+                                  placeholder="Commit"
+                                />
+                                <button
+                                  className="bg-[#ffa580]  border border-black transition-all duration-200 ease-in-out hover:bg-black hover:text-white "
+                                  onClick={(e) => {
+                                    dispatch(addCommit([post.id, commit]));
+                                  }}
+                                >
+                                  {" "}
+                                  commit{" "}
+                                </button>
+                              </div>
+                            ) : (
+                              post.commit
+                            )}
+                          </div>
+
                         </td>
                       </tr>
                     );
