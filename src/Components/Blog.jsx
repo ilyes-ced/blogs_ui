@@ -80,7 +80,7 @@ export default function Blog() {
             <div className="w-1/2  flex items-center justify-center ">
               <label
                 htmlFor="start"
-                className="border-b-4 border-black mb-4 pb-[1px] mt-[2px]"
+                className="border-b-4 border-black mb-3 pb-[1px] mt-[2px]"
               >
                 Start :{" "}
               </label>
@@ -94,7 +94,7 @@ export default function Blog() {
             <div className="w-1/2 flex items-center justify-center ">
               <label
                 htmlFor="end"
-                className="border-b-4 border-black mb-4 pb-[2p1] mt-[2px]"
+                className="border-b-4 border-black mb-3 pb-[2px] mt-[2px]"
               >
                 End :{" "}
               </label>
